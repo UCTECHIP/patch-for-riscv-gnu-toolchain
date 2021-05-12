@@ -1,0 +1,29 @@
+From 48a82a301ccfa30f3d0a472f84976f6a5a1347de Mon Sep 17 00:00:00 2001
+From: yexc <xc.ye@uctechip.com>
+Date: Wed, 20 Jan 2021 10:56:48 +0800
+Subject: [PATCH 1/2] reset VType layout to RVV 0.9
+
+---
+ include/opcode/riscv.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/include/opcode/riscv.h b/include/opcode/riscv.h
+index 5a9d38b..4c4b32b 100644
+--- a/include/opcode/riscv.h
++++ b/include/opcode/riscv.h
+@@ -310,10 +310,10 @@ static const char * const riscv_vma[2] =
+ #define OP_MASK_VFUNCT6		0x3f
+ #define OP_SH_VFUNCT6		26
+ 
+-#define OP_MASK_VLMUL		0x7
++#define OP_MASK_VLMUL		0x23
+ #define OP_SH_VLMUL		0
+ #define OP_MASK_VSEW		0x7
+-#define OP_SH_VSEW		3
++#define OP_SH_VSEW		2
+ #define OP_MASK_VTA		0x1
+ #define OP_SH_VTA		6
+ #define OP_MASK_VMA		0x1
+-- 
+2.7.4
+
